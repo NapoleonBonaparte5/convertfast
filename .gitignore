@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment variables - NUNCA subir al repo
+.env
+.env.local
+.env.production
+backend/.env
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Temporary files - archivos de usuarios
+tmp/
+backend/tmp/
+backend/logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Testing
+coverage/
+
+# Misc
+*.tgz
+*.zip

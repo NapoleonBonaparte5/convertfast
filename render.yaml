@@ -1,0 +1,45 @@
+# render.yaml - Configuración de despliegue en Render.com
+# Coloca este archivo en la RAÍZ del repositorio
+
+services:
+  # ==============================
+  # BACKEND (Node.js)
+  # ==============================
+  - type: web
+    name: convertfast-backend
+    env: node
+    region: frankfurt  # Más cercano a España/Europa
+    plan: starter      # $7/mes - suficiente para MVP
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: FRONTEND_URL
+        # IMPORTANTE: Cambia esto por tu dominio real de Vercel o custom
+        value: https://convertfast.vercel.app
+      - key: FILE_EXPIRY_MINUTES
+        value: 60
+      - key: MAX_FILE_SIZE_MB
+        value: 100
+      - key: UPLOAD_DIR
+        value: /tmp/uploads
+      - key: OUTPUT_DIR
+        value: /tmp/outputs
+      - key: SECRET_KEY
+        # Genera con: openssl rand -base64 32
+        generateValue: true
+    disk:
+      name: convertfast-tmp
+      mountPath: /tmp
+      sizeGB: 5
+
+  # ==============================
+  # FRONTEND (Static Site en Vercel)
+  # Nota: El frontend se despliega por separado en Vercel.
+  # Este bloque es solo referencia.
+  # ==============================
