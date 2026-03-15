@@ -279,7 +279,7 @@ export default function HomePage() {
       {/* Features / Why us */}
       <section className="max-w-6xl mx-auto px-4 py-16">
         <h2 className="font-display text-2xl font-bold text-white mb-10 text-center">
-          Por qué elegir ConvertFast
+          Por qué elegir ConverFast
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[
@@ -342,7 +342,7 @@ const FAQ_ITEMS = [
   { q: '¿Es realmente gratis?', a: 'Sí, completamente gratis. Sin límites de uso diario ni funciones bloqueadas.' },
   { q: '¿Qué pasa con mis archivos?', a: 'Los archivos se eliminan automáticamente de nuestros servidores tras 1 hora. Nunca los compartimos ni analizamos.' },
   { q: '¿Cuál es el límite de tamaño?', a: `Puedes subir archivos de hasta ${MAX_FILE_SIZE_MB}MB. Para archivos más grandes, considera comprimir primero.` },
-  { q: '¿Necesito instalar algo?', a: 'No. ConvertFast funciona 100% en el navegador. Compatible con Chrome, Firefox, Safari y Edge.' },
+  { q: '¿Necesito instalar algo?', a: 'No. ConverFast funciona 100% en el navegador. Compatible con Chrome, Firefox, Safari y Edge.' },
   { q: '¿Qué formatos soportáis?', a: 'Más de 50 formatos: documentos (PDF, Word, Excel), imágenes (JPG, PNG, WebP, HEIC), audio (MP3, WAV, FLAC) y video (MP4, AVI, MKV).' },
 ];
 

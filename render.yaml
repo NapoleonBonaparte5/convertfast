@@ -6,7 +6,7 @@ services:
   # BACKEND (Node.js)
   # ==============================
   - type: web
-    name: convertfast-backend
+    name: converfast-backend
     env: node
     region: frankfurt  # Más cercano a España/Europa
     plan: starter      # $7/mes - suficiente para MVP
@@ -21,7 +21,7 @@ services:
         value: 3001
       - key: FRONTEND_URL
         # IMPORTANTE: Cambia esto por tu dominio real de Vercel o custom
-        value: https://convertfast.vercel.app
+        value: https://ConverFast.vercel.app
       - key: FILE_EXPIRY_MINUTES
         value: 60
       - key: MAX_FILE_SIZE_MB
@@ -34,7 +34,7 @@ services:
         # Genera con: openssl rand -base64 32
         generateValue: true
     disk:
-      name: convertfast-tmp
+      name: ConverFast-tmp
       mountPath: /tmp
       sizeGB: 5
 

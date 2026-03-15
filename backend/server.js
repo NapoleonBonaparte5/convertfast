@@ -1,5 +1,5 @@
 // =====================================================
-// CONVERTFAST - Backend Principal
+// ConverFast - Backend Principal
 // Node.js + Express | Procesamiento de Archivos
 // =====================================================
 
@@ -180,7 +180,7 @@ app.use((req, res) => {
 // INICIO DEL SERVIDOR
 // ============================
 app.listen(PORT, () => {
-  logger.info(`🚀 ConvertFast Backend corriendo en puerto ${PORT}`);
+  logger.info(`🚀 ConverFast Backend corriendo en puerto ${PORT}`);
   logger.info(`🌍 Entorno: ${process.env.NODE_ENV || 'development'}`);
   logger.info(`📁 Uploads: ${UPLOAD_DIR}`);
   logger.info(`📂 Outputs: ${OUTPUT_DIR}`);

@@ -7,9 +7,9 @@ export default function AboutPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-        <h1 className="font-display text-4xl font-bold text-white mb-4">Sobre ConvertFast</h1>
+        <h1 className="font-display text-4xl font-bold text-white mb-4">Sobre ConverFast</h1>
         <p className="text-gray-400 text-lg leading-relaxed mb-10">
-          ConvertFast nació de una necesidad real: convertir archivos sin tener que registrarse,
+          ConverFast nació de una necesidad real: convertir archivos sin tener que registrarse,
           instalar software ni sufrir anuncios agresivos. Somos una herramienta simple, gratuita y privada.
         </p>
 
@@ -37,8 +37,8 @@ export default function AboutPage() {
 
         <p className="text-gray-500 text-sm">
           ¿Tienes sugerencias? Escríbenos a{' '}
-          <a href="mailto:hola@convertfast.app" className="text-accent hover:underline">
-            hola@convertfast.app
+          <a href="mailto:hola@converfast.com" className="text-accent hover:underline">
+            hola@converfast.com
           </a>
         </p>
       </motion.div>

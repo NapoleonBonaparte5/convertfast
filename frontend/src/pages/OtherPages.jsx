@@ -12,7 +12,7 @@ export function PrivacyPage() {
         {[
           {
             title: '1. Datos que recopilamos',
-            text: `ConvertFast NO recopila datos personales identificables. No pedimos nombre, email, ni ningún dato de usuario. Los únicos datos procesados son los archivos que subes voluntariamente para su conversión.`,
+            text: `ConverFast NO recopila datos personales identificables. No pedimos nombre, email, ni ningún dato de usuario. Los únicos datos procesados son los archivos que subes voluntariamente para su conversión.`,
           },
           {
             title: '2. Archivos subidos',
@@ -32,11 +32,11 @@ export function PrivacyPage() {
           },
           {
             title: '6. Cumplimiento GDPR',
-            text: `Cumplimos con el Reglamento General de Protección de Datos (GDPR) de la Unión Europea. Dado que no recopilamos datos personales, no hay datos que solicitar ni borrar. Para cualquier consulta: hola@convertfast.app`,
+            text: `Cumplimos con el Reglamento General de Protección de Datos (GDPR) de la Unión Europea. Dado que no recopilamos datos personales, no hay datos que solicitar ni borrar. Para cualquier consulta: hola@converfast.com`,
           },
           {
             title: '7. Menores',
-            text: `ConvertFast no está dirigido a menores de 13 años. No recopilamos datos de menores intencionalmente.`,
+            text: `ConverFast no está dirigido a menores de 13 años. No recopilamos datos de menores intencionalmente.`,
           },
         ].map(section => (
           <div key={section.title} className="mb-8">
@@ -59,11 +59,11 @@ export function TermsPage() {
         {[
           {
             title: '1. Uso del servicio',
-            text: 'ConvertFast es una herramienta de conversión de archivos gratuita. Al usarla, aceptas estos términos. El servicio se ofrece "tal cual", sin garantías de disponibilidad continua.',
+            text: 'ConverFast es una herramienta de conversión de archivos gratuita. Al usarla, aceptas estos términos. El servicio se ofrece "tal cual", sin garantías de disponibilidad continua.',
           },
           {
             title: '2. Uso aceptable',
-            text: 'Está prohibido usar ConvertFast para procesar archivos con contenido ilegal, malware, material protegido por derechos de autor sin autorización, o para cualquier actividad que viole leyes aplicables.',
+            text: 'Está prohibido usar ConverFast para procesar archivos con contenido ilegal, malware, material protegido por derechos de autor sin autorización, o para cualquier actividad que viole leyes aplicables.',
           },
           {
             title: '3. Límites del servicio',
@@ -71,11 +71,11 @@ export function TermsPage() {
           },
           {
             title: '4. Propiedad intelectual',
-            text: 'Los usuarios son responsables de tener los derechos necesarios sobre los archivos que convierten. ConvertFast no reclama ningún derecho sobre los archivos procesados.',
+            text: 'Los usuarios son responsables de tener los derechos necesarios sobre los archivos que convierten. ConverFast no reclama ningún derecho sobre los archivos procesados.',
           },
           {
             title: '5. Limitación de responsabilidad',
-            text: 'ConvertFast no se responsabiliza por pérdida de archivos, calidad de conversión, o daños derivados del uso del servicio. Usa el servicio bajo tu propia responsabilidad.',
+            text: 'ConverFast no se responsabiliza por pérdida de archivos, calidad de conversión, o daños derivados del uso del servicio. Usa el servicio bajo tu propia responsabilidad.',
           },
           {
             title: '6. Cambios en los términos',

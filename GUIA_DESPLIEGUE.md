@@ -1,4 +1,4 @@
-# 🚀 GUÍA COMPLETA DE LANZAMIENTO — ConvertFast
+# 🚀 GUÍA COMPLETA DE LANZAMIENTO — ConverFast
 ## Paso a paso desde cero hasta producción
 
 ---
@@ -41,7 +41,7 @@ git --version     # https://git-scm.com
 ## 2. ESTRUCTURA DEL PROYECTO
 
 ```
-convertfast/
+ConverFast/
 ├── backend/                  ← Servidor Node.js (API)
 │   ├── server.js             ← Entrada principal del servidor
 │   ├── package.json
@@ -90,10 +90,10 @@ convertfast/
 
 ### Paso 3.1 — Inicializa el repositorio Git
 ```bash
-cd convertfast
+cd ConverFast
 git init
 git add .
-git commit -m "feat: initial commit - ConvertFast MVP"
+git commit -m "feat: initial commit - ConverFast MVP"
 ```
 
 ### Paso 3.2 — Configura el Backend
@@ -118,7 +118,7 @@ cp .env.example .env
 
 # Arranca el servidor de desarrollo
 npm run dev
-# → Verás: "🚀 ConvertFast Backend corriendo en puerto 3001"
+# → Verás: "🚀 ConverFast Backend corriendo en puerto 3001"
 ```
 
 ### Paso 3.3 — Configura el Frontend
@@ -191,12 +191,12 @@ pip3 install pdf2docx
 
 ### Paso 5.1 — Sube el código a GitHub
 ```bash
-# En la raíz del proyecto convertfast/
+# En la raíz del proyecto ConverFast/
 git add .
 git commit -m "ready for deployment"
 
-# Crea un repo en https://github.com/new (nombre: convertfast)
-git remote add origin https://github.com/TU_USUARIO/convertfast.git
+# Crea un repo en https://github.com/new (nombre: ConverFast)
+git remote add origin https://github.com/TU_USUARIO/ConverFast.git
 git branch -M main
 git push -u origin main
 ```
@@ -204,9 +204,9 @@ git push -u origin main
 ### Paso 5.2 — Crea el servicio en Render.com
 1. Ve a https://render.com y haz login (crea cuenta si no tienes)
 2. Click en **"New +"** → **"Web Service"**
-3. Conecta tu cuenta de GitHub y selecciona el repo `convertfast`
+3. Conecta tu cuenta de GitHub y selecciona el repo `ConverFast`
 4. Configura:
-   - **Name**: convertfast-backend
+   - **Name**: ConverFast-backend
    - **Root Directory**: `backend`
    - **Environment**: `Node`
    - **Region**: Frankfurt (EU - más rápido para España)
@@ -221,7 +221,7 @@ En la sección "Environment Variables" de tu servicio, añade:
 ```
 NODE_ENV          = production
 PORT              = 3001
-FRONTEND_URL      = https://convertfast.vercel.app   ← cambia por tu URL real
+FRONTEND_URL      = https://ConverFast.vercel.app   ← cambia por tu URL real
 FILE_EXPIRY_MINUTES = 60
 MAX_FILE_SIZE_MB  = 100
 UPLOAD_DIR        = /tmp/uploads
@@ -231,7 +231,7 @@ SECRET_KEY        = [genera con: openssl rand -base64 32]
 
 ### Paso 5.4 — Disco persistente (para archivos temporales)
 En Render, ve a tu servicio → **"Disks"** → **"Add Disk"**:
-- Name: convertfast-storage
+- Name: ConverFast-storage
 - Mount Path: `/tmp`
 - Size: 5 GB
 
@@ -249,9 +249,9 @@ Y en Render, cambia Build Command a: `chmod +x build.sh && ./build.sh`
 
 ### Paso 5.6 — Verifica el backend
 Tu backend estará disponible en:
-`https://convertfast-backend.onrender.com`
+`https://ConverFast-backend.onrender.com`
 
-Prueba: `https://convertfast-backend.onrender.com/api/health`
+Prueba: `https://ConverFast-backend.onrender.com/api/health`
 Deberías ver: `{"status":"ok","version":"1.0.0"}`
 
 ---
@@ -276,7 +276,7 @@ npm install -g vercel
 ### Paso 6.3 — Variables de entorno en Vercel
 En el dashboard de Vercel → Settings → Environment Variables:
 ```
-VITE_API_URL = https://convertfast-backend.onrender.com
+VITE_API_URL = https://ConverFast-backend.onrender.com
 ```
 
 ### Paso 6.4 — Actualiza la URL del backend en vite.config.js
@@ -300,7 +300,7 @@ En `frontend/vercel.json`, añade:
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://convertfast-backend.onrender.com/api/:path*"
+      "destination": "https://ConverFast-backend.onrender.com/api/:path*"
     },
     {
       "source": "/(.*)",
@@ -318,10 +318,10 @@ const res = await fetch(`${API_BASE}/api/upload`, { ... });
 ```
 
 ### Paso 6.5 — Actualiza CORS en el backend
-Una vez tengas la URL de Vercel (ej: convertfast.vercel.app),
+Una vez tengas la URL de Vercel (ej: ConverFast.vercel.app),
 actualiza `FRONTEND_URL` en las variables de Render:
 ```
-FRONTEND_URL = https://convertfast.vercel.app
+FRONTEND_URL = https://ConverFast.vercel.app
 ```
 
 ---
@@ -333,7 +333,7 @@ FRONTEND_URL = https://convertfast.vercel.app
 - Porkbun: https://porkbun.com (más barato, ~$9/año)
 - Google Domains: https://domains.google
 
-Busca: `convertfast.app`, `convertfast.io`, `convertfiles.app`, etc.
+Busca: `converfast.com`, `ConverFast.io`, `convertfiles.app`, etc.
 
 ### Paso 7.2 — Conecta en Vercel
 1. Vercel Dashboard → tu proyecto → Settings → Domains
@@ -346,9 +346,9 @@ Busca: `convertfast.app`, `convertfast.io`, `convertfiles.app`, etc.
 6. SSL se activa automáticamente (Let's Encrypt)
 
 ### Paso 7.3 — Conecta dominio al backend (opcional)
-Si quieres `api.convertfast.app` en lugar de la URL de Render:
+Si quieres `api.converfast.com` en lugar de la URL de Render:
 1. En Namecheap, añade CNAME: `api` → tu-servicio.onrender.com
-2. En Render → Custom Domains → añade `api.convertfast.app`
+2. En Render → Custom Domains → añade `api.converfast.com`
 
 ---
 
@@ -551,5 +551,5 @@ Mes 5-6: 2.000+ visitas/día. Beneficio neto positivo.
 
 ---
 
-*ConvertFast — Hecho para durar, diseñado para escalar*
+*ConverFast — Hecho para durar, diseñado para escalar*
 *Guía actualizada: marzo 2026*

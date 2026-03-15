@@ -36,7 +36,7 @@ export default function Navbar() {
             <Zap size={16} className="text-accent" />
           </div>
           <span className="font-display font-semibold text-white text-lg tracking-tight">
-            Convert<span className="text-accent">Fast</span>
+            Conver<span className="text-accent">Fast</span>
           </span>
         </Link>
 

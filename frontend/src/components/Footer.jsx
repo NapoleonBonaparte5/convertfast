@@ -62,7 +62,7 @@ export default function Footer() {
 
         <div className="border-t border-dark-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-gray-600 text-xs">
-            © {year} ConvertFast. Todos los derechos reservados.
+            © {year} ConverFast. Todos los derechos reservados.
           </p>
           <p className="text-gray-600 text-xs flex items-center gap-1.5">
             Hecho con <Heart size={11} className="text-red-500" /> para la comunidad

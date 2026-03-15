@@ -1,5 +1,5 @@
 {
-  "name": "convertfast-backend",
+  "name": "converfast-backend",
   "version": "1.0.0",
   "description": "Backend para herramienta de conversión de archivos",
   "main": "server.js",
