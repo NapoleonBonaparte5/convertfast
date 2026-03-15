@@ -20,6 +20,7 @@ const uploadRoutes = require('./routes/upload');
 const { cleanupExpiredFiles } = require('./utils/cleanup');
 
 const app = express();
+app.set('trust proxy', 1);
 const PORT = process.env.PORT || 3001;
 
 // ============================
